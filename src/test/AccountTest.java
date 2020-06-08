@@ -3,10 +3,11 @@ package test;
 import main.Account;
 
 public class AccountTest {
+	
 	public void testAccount() throws Exception {
 		Account account = new Account();
 		if (account == null) 
-			throw new Exception("拌谅积己 角菩");
+			throw new Exception("靸濎劚 鞁ろ尐");
 		
 	}
 	public static void main(String[] args) {
@@ -15,9 +16,9 @@ public class AccountTest {
 		try {
 			test.testAccount();
 		} catch (Exception e) {
-			System.out.println("角菩(X)");
+			System.out.println("鞁ろ尐(X)");
 			return;
 		}
-		System.out.println("己傍(O)");
+		System.out.println("靹标车(O)");
 	}
 }
