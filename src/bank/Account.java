@@ -1,4 +1,4 @@
-package main;
+package bank;
 
 public class Account {
 	private int balance;

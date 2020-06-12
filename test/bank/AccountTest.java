@@ -1,12 +1,12 @@
-package test;
+package bank;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
+
 import org.junit.Before;
 import org.junit.Test;
 
-import main.Account;
 
 public class AccountTest {
 	private Account account;
@@ -45,6 +45,20 @@ public class AccountTest {
 
 		account.withdraw(1000);
 		assertEquals(9000, account.getBalance());
+	}
+	
+	@Test
+	public void testSavePassword() throws Exception {
+		UserRegister register = new UserRegister();
+		Cipher cipher = new MockMD5Cipher();
+		
+		String userId = "sweet88";
+		String password = "potato";
+				
+		register.savePassword(userId, cipher.encrypt(password));
+		String decryptjPassword = cipher.decrypt(register.getPassword(userId));
+		assertEquals(password, decryptjPassword);
+		
 	}
 
 }
